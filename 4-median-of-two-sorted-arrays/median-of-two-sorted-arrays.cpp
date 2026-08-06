@@ -8,14 +8,14 @@ public:
         sort(nums1.begin(), nums1.end());
 
         int mid = nums1.size()/2;
-        
+
         double ans = 0;
 
-        if(nums1.size() % 2 != 0) ans =  nums1[mid];
+        if(nums1.size() % 2 != 0) return nums1[mid];
         else {
-            ans = double(nums1[mid-1] + nums1[mid])/2;
+            return double(nums1[mid-1] + nums1[mid])/2;
         }
-        return ans;
+        return -1;
     }
 
 };
