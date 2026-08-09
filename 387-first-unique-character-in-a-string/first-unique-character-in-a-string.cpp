@@ -1,20 +1,15 @@
 class Solution {
 public:
     int firstUniqChar(string s) {
-        unordered_map<char, pair<int, vector<int>>> mp;
+        
+        vector<int> freq(26);
 
-        for(int i = s.size()-1; i >= 0; i--) {
-            mp[s[i]].first++;
-            mp[s[i]].second.push_back(i);
+        for(char c : s) freq[c - 'a']++;
+
+        for(int i = 0; i < s.size(); i++) {
+            if((freq[s[i] - 'a']) == 1) return i;
         }
 
-
-
-        for(auto pair : mp) {
-            if(pair.second.first == 1){
-             return pair.second.second[0];
-            }
-        }
         return -1;
     }
 };
