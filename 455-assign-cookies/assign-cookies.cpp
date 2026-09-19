@@ -10,7 +10,7 @@ public:
                 ans++;
                 i--;
                 j--;
-            } else if(g[i] > s[j]) {
+            } else {
                 i--;
             }
         }
