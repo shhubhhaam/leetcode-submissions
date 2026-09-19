@@ -13,10 +13,6 @@ public:
             } else if(g[i] > s[j]) {
                 i--;
             }
-            else {
-                i--;
-                j--;
-            }
         }
         return ans;
     }
