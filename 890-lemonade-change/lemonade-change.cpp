@@ -3,8 +3,6 @@ public:
     bool lemonadeChange(vector<int>& bills) {
         int dollor_5 = 0, dollor_10 = 0, dollor_20 = 0;
 
-        bool ans = true;
-
         for(int i = 0; i < bills.size(); i++) {
             if(bills[i] == 5) dollor_5++;
 
@@ -13,8 +11,7 @@ public:
                     dollor_5--;
                     dollor_10++;
                 } else {
-                    ans = false;
-                    break;
+                    return false;
                 }
             }
             else {
@@ -26,11 +23,10 @@ public:
                     dollor_20++;
                     dollor_5 -= 3;
                 } else {
-                    ans = false;
-                    break;
+                    return false;
                 }
             }
         }
-        return ans;
+        return true;
     }
 };
