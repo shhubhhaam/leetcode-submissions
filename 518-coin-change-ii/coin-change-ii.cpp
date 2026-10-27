@@ -12,6 +12,6 @@ public:
             }
         }
 
-        return static_cast<int>(dp[amount]);
+        return dp[amount];
     }
 };
